@@ -15,7 +15,7 @@ jobs:
       run: npm i
     
     - name: Build with Webpack
-      run: npx Webpack
+      run: npx webpack
 
     - uses: EndBug/add-and-commit@v7
       with:
