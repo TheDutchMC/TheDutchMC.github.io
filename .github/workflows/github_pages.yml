@@ -17,6 +17,9 @@ jobs:
     - name: Build with Webpack
       run: npx webpack
 
+    - name: Remove githignore file
+      run: rm -f .gitignore
+
     - uses: EndBug/add-and-commit@v7
       with:
         add: '["dist/dist.js", "index.html", "img/*", "wiki/*"]'
