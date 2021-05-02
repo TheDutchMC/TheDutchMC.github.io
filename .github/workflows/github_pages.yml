@@ -20,6 +20,13 @@ jobs:
     - name: Remove githignore file
       run: rm -f .gitignore
 
+    - name: Git Checkout
+      run: git checkout -b gh-pages
+    - name: Clear Git
+      run: git rm -rf --cached *
+    - name: Set Upstream
+      run: git branch --set-upstream-to=origin/v2 gh-pages
+
     - uses: EndBug/add-and-commit@v7
       with:
         add: '["dist/dist.js", "index.html", "img/*", "wiki/*"]'
