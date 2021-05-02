@@ -22,6 +22,8 @@ jobs:
 
     - name: Git Checkout
       run: git checkout -b gh-pages
+    - name: Git Fetch
+      run: git fetch origin v2
     - name: Set Upstream
       run: git branch --set-upstream-to=origin/v2 gh-pages
 
