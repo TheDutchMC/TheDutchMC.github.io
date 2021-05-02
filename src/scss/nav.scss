@@ -1,0 +1,62 @@
+@use "./fonts";
+
+nav {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    justify-content: space-between;
+    background-color: #1E2934;
+    height: 3.5rem;
+
+    .left {
+        justify-content: flex-start;
+    }
+
+    .right {
+        justify-content: flex-end;
+    }
+
+    & > div {
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        * {
+            margin-left: 5px;
+            margin-right: 5px;
+            color: #CAD1D9
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 1.3em;
+        
+            @include fonts.set-font(fonts.$roboto);
+            position: relative;
+        }
+
+        a:hover {
+            color: darken(#CAD1D9, 15%);
+            transition: 0.25s ease;
+        }
+
+        a:hover:after {
+            width: 100%;
+            left: 0;
+        }
+
+        a:after {
+            background: none repeat scroll 0 0 transparent;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 2px;
+            left: 50%;
+            position: absolute;
+            background: darken(#CAD1D9, 15%);
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            width: 0;
+        }
+    }
+}

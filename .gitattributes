@@ -1,0 +1,8 @@
+webpack.config.js linguist-vendored
+wiki/markdown-converter/js/* linguist-vendored
+wiki/markdown-converter/css/* linguist-vendored
+wiki/
+
+*.md linguist-detectable=true
+*.md linguist-language=Markdown
+*.md linguist-documentation=false

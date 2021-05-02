@@ -1,0 +1,17 @@
+@forward "./nav.scss";
+@forward "./body.scss";
+@forward "./footer.scss";
+
+html, body {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    background-color: #32404E;
+    flex-direction: column;
+}

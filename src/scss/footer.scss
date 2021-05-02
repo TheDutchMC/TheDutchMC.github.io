@@ -1,0 +1,16 @@
+@use "./fonts";
+
+footer {
+    height: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    background-color: #1E2934;
+    justify-content: center;
+    margin-top: auto;
+
+    p {
+        @include fonts.set-font(fonts.$roboto);
+        color: #CAD1D9;
+    }
+}
